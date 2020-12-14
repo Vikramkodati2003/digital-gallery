@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ImageGallery from '../src/ImageGallery';
-
-const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
-
 class App extends React.Component {
 
   constructor() {
@@ -30,31 +27,9 @@ class App extends React.Component {
     this.images = [
       {
         thumbnail: ``,
-        original: `${PREFIX_URL}4v.jpg`,
         embedUrl: 'https://www.youtube.com/embed/JNiOfXHfp8o',
         description: 'Render custom slides within the gallery',
         renderItem: this._renderVideo.bind(this)
-      },
-      {
-        original: `${PREFIX_URL}image_set_default.jpg`,
-        thumbnail: `${PREFIX_URL}image_set_thumb.jpg`,
-        imageSet: [
-          {
-            srcSet: `${PREFIX_URL}image_set_cropped.jpg`,
-            media : '(max-width: 1280px)',
-          },
-          {
-            srcSet: `${PREFIX_URL}image_set_default.jpg`,
-            media : '(min-width: 1280px)',
-          }
-        ]
-      },
-      {
-        original: `${PREFIX_URL}1.jpg`,
-        thumbnail: `${PREFIX_URL}1t.jpg`,
-        originalClass: 'featured-slide',
-        thumbnailClass: 'featured-thumb',
-        description: 'Vikram Kodati'
       },
       
       {
